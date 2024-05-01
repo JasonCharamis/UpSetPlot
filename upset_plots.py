@@ -90,13 +90,13 @@ def classify_subsets(categorical_variable, stacked_categories):
         
         for category in categories:
             if re.search(category[0], cv):
-                classifyd_subsets.append(category[1])
+                classified_subsets.append(category[1])
                 category_found = True
                 break
         if not category_found:
-            classifyd_subsets.append('Other')
+            classified_subsets.append('Other')
 
-    return classifyd_subsets
+    return classified_subsets
 
 
 def generate_lists_of_de_genes(filenames, stacked=None, categorical_variable = 'Annotation'):
